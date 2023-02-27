@@ -4,7 +4,7 @@ Library    DebugLibrary
 
 *** Test Cases ***
 test Open
-    &{options} =	create dictionary	headless=${False}
+    &{options} =	create dictionary	headless=${True}
     Open Browser    https://the-internet.herokuapp.com/login    browser=chrome    options=${options}
     Wait Until Element Is Visible    xpath=//h2[normalize-space()='Login Page']
     Wait Until Element Is Visible    xpath=//input[@id='username']    
