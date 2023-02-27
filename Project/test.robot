@@ -12,7 +12,7 @@ test Open
     Input Text    xpath=//input[@id='password']    text=SuperSecretPassword!    clear=true
     Run Async Keywords    Click Element    xpath=//i[@class='fa fa-2x fa-sign-in']    AND
     ...    Wait For Response Url    https://the-internet.herokuapp.com/secure 
-    ${text}=    Get Text    xpath=//i[@class='icon-lock']
+    ${text}=    Get Text    xpath=//div[@id='flash']
     Wait Until Element Is Visible    xpath=//i[@class='icon-2x icon-signout']
     Click Element    xpath=//i[@class='icon-2x icon-signout']
     Log To Console    ${text}
